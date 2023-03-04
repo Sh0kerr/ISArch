@@ -1,0 +1,44 @@
+@startuml conceptual_model
+class Camera {
+    void take_photo()
+    void send_image()
+}
+
+class Server {
+    int robot_status
+
+    void status_check(RPi.send_status())
+    void img_to_bmp()
+    void find_coords()
+    void make_route()
+    void send_route(RPi)
+}
+
+class Robot {
+    color redint power_level
+    int materials_level
+
+    void split_route()
+    void interpret_command()
+    bool engine_on()
+    bool engine_off()
+    bool go_forward()
+    bool go_back()
+    bool go_left()
+    bool go_right()
+    bool send_status()
+}
+
+class Graffiti {
+    color green
+}
+
+class Obstacle {
+    color blue
+}
+
+Server <.. Robot
+Server <.. Camera
+Camera <.. Graffiti
+Camera <.. Obstacle
+@enduml
