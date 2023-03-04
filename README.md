@@ -1,1 +1,1 @@
-жопа
+Cleaning robot
