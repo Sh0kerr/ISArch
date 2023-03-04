@@ -1,0 +1,9 @@
+C:/Coding/ISArch/build/CMakeFiles/Experimental.dir
+C:/Coding/ISArch/build/CMakeFiles/Nightly.dir
+C:/Coding/ISArch/build/CMakeFiles/Continuous.dir
+C:/Coding/ISArch/build/CMakeFiles/NightlyMemoryCheck.dir
+C:/Coding/ISArch/build/CMakeFiles/alphabot.dir
+C:/Coding/ISArch/build/CMakeFiles/PACKAGE.dir
+C:/Coding/ISArch/build/CMakeFiles/RUN_TESTS.dir
+C:/Coding/ISArch/build/CMakeFiles/ALL_BUILD.dir
+C:/Coding/ISArch/build/CMakeFiles/ZERO_CHECK.dir
