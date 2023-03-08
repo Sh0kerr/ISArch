@@ -7,7 +7,7 @@ enable_testing()
 find_package( OpenCV REQUIRED )
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
-add_executable(alphabot main.cpp)
+add_executable(alphabot src/main.cpp)
 
 target_link_libraries( alphabot ${OpenCV_LIBS} )
 
