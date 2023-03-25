@@ -1,7 +1,8 @@
 #include <iostream>
 #include <opencv2/opencv.hpp>
 
-enum status_code {
+enum Estates 
+{
     EWork,
     EProcessGraffiti,
     ERotate,
@@ -9,7 +10,8 @@ enum status_code {
 };
 
 // Класс для отправки команд
-class CommandSender {
+class CommandSender 
+{
     public:
         void rotate();
         void move();
@@ -79,9 +81,11 @@ class Server
 // @property coord_y           Ордината робота
 // @property power_level       Уровень заряда робота
 // @property materials_level   Уровень материалов для очистки граффити
-class Robot {
+class Robot 
+{
 
     private:
+
         // Х координата робота
         int coord_x;
         // У координата робота
@@ -95,8 +99,9 @@ class Robot {
 
     public:
 
-        Robot() {
-            
+        Robot() 
+        {
+            robot_status = EWork;
         }
 
         // Вычисление времени движения и поворота робота
@@ -118,9 +123,23 @@ class Robot {
         // Отправка статуса на сервер
         bool send_status();
 
+        void processEvent()
+        {
+            switch(state)
+            {
+            case ERotate:
+            
+            case EMove:
+
+            case EProcessGraffiti:
+
+
+            }
+        }
+
 };
 
-// Пока хз, нужно ли
+// Пока хз, нужно ли внатурен
 class Camera
 {
 
