@@ -5,16 +5,24 @@ enum Estates
 {
     EWork,
     EProcessGraffiti,
-    ERotate,
-    EMove,
+    ERotateRight,
+    ERotateLeft,
+    EMoveForward,
 };
 
 // Класс для отправки команд
 class CommandSender 
 {
     public:
-        void rotate();
-        void move();
+        void rotateRight(int time){
+            cout << "rotate right" << endl;
+        };
+        void rotateLeft(int time){
+            cout << "rotate left" << endl;
+        };
+        void moveForward(int time){
+            cout << "move forward" << endl;
+        };
 };
 
 // Определяет наличие граффити
@@ -85,6 +93,8 @@ class Robot
 {
 
     private:
+        CommandSender commandsender;
+
 
         // Х координата робота
         int coord_x;
@@ -95,13 +105,13 @@ class Robot
         // Текущий уровень чистящих средств
         int materials_level;
         // Действие робота
-        int robot_status;
+        int state;
 
     public:
 
         Robot() 
         {
-            robot_status = EWork;
+            state = EWork;
         }
 
         // Вычисление времени движения и поворота робота
@@ -127,12 +137,19 @@ class Robot
         {
             switch(state)
             {
-            case ERotate:
-            
-            case EMove:
+            case ERotateRight:
+                commandsender.rotateRight(time);
+                break;
+                
+            case ERotateLeft:
+                commandsender.rotateLeft(time);
+                break;
+
+            case EMoveForward:
+                commandsender.moveForward(time);
 
             case EProcessGraffiti:
-
+                
 
             }
         }
